@@ -1,9 +1,13 @@
 #!/usr/bin/python3
 
-def safe_print_integer(value):
-    try:
-        print("{:d}".format(value))
-    except (TypeError, ValueError):
-        return False
+def safe_print_list_integers(my_list=[], x=0):
+    num_of_elements = 0
+    for index in range(x):
+        try:
+            print("{:d}".format(my_list[index]), end="")
+            num_of_elements += 1
+        except (ValueError, TypeError):
+            pass
 
-    return True
+    print()
+    return num_of_elements
