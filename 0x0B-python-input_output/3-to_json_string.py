@@ -10,7 +10,3 @@ def to_json_string(my_obj):
      returns JSON representation
     '''
     return json.dumps(my_obj)
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
