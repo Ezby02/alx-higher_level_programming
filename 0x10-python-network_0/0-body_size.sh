@@ -1,3 +1,3 @@
 #!/bin/bash
 # Bash script that takes in a url,sends request to that url and displays size of the body of the new response
-curl -s "$1" | wc -c
+curl -Is "$1" | grep -w 'Content-Length' | cut -f2 -d' '
